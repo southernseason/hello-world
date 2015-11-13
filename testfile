@@ -1,0 +1,1 @@
+select a.qty_avail, a.ITEM_NO, b.LONG_DESCR, c.max_qty, c.QTY_AVAIL  from IM_INV a left outer join IM_ITEM b on a.ITEM_NO=b.ITEM_NO left outer join IM_INV c on a.ITEM_NO=c.ITEM_NO where a.LOC_ID='dc' and CATEG_COD='950'  and c.loc_id='98' and c.MAX_QTY>'0' and PROF_ALPHA_5='pog'
